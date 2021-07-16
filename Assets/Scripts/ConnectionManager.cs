@@ -5,6 +5,7 @@ using UnityEngine;
 public class ConnectionManager : MonoBehaviour
 {
 	[SerializeField] private GameObject _menuPanel;
+	[SerializeField] private GameObject _battleUI;
 
 	public void OnHostGameClicked()
 	{
@@ -16,6 +17,7 @@ public class ConnectionManager : MonoBehaviour
 		};
 		NetworkManager.Singleton.StartHost();
 		_menuPanel.SetActive(false);
+		_battleUI.SetActive(true);
 	}
 	
 	public void OnJoinGameClicked()
@@ -23,5 +25,6 @@ public class ConnectionManager : MonoBehaviour
 		NetworkManager.Singleton.NetworkConfig.ConnectionData = Encoding.ASCII.GetBytes("HackThePlanet");
 		NetworkManager.Singleton.StartClient();
 		_menuPanel.SetActive(false);
+		_battleUI.SetActive(true);
 	}
 }
