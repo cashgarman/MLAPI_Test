@@ -1,6 +1,8 @@
 ﻿#if UNITY_EDITOR
 using UnityEditor;
 #endif
+using MLAPI;
+using MLAPI.NetworkVariable;
 using UnityEngine;
 
 namespace DitzelGames.FastIK
@@ -8,7 +10,7 @@ namespace DitzelGames.FastIK
     /// <summary>
     /// Fabrik IK Solver
     /// </summary>
-    public class FastIKFabric : MonoBehaviour
+    public class FastIKFabric : NetworkBehaviour
     {
         /// <summary>
         /// Chain length of bones
@@ -18,7 +20,22 @@ namespace DitzelGames.FastIK
         /// <summary>
         /// Target the chain should bent to
         /// </summary>
+
+        public NetworkVariableVector3 TargetPosition = new NetworkVariableVector3(new NetworkVariableSettings
+        {
+            WritePermission = NetworkVariablePermission.OwnerOnly,
+            ReadPermission = NetworkVariablePermission.Everyone
+        });
+
         public Transform Target;
+        
+        public NetworkVariableBool Enabled = new NetworkVariableBool(new NetworkVariableSettings
+        {
+            WritePermission = NetworkVariablePermission.OwnerOnly,
+            ReadPermission = NetworkVariablePermission.Everyone
+        }, false);
+        
+        // public Transform Target;
         public Transform Pole;
 
         /// <summary>
@@ -50,7 +67,7 @@ namespace DitzelGames.FastIK
 
 
         // Start is called before the first frame update
-        void Awake()
+        void Start()
         {
             Init();
         }
@@ -74,13 +91,12 @@ namespace DitzelGames.FastIK
             }
 
             //init target
-            if (Target == null)
-            {
-                Target = new GameObject(gameObject.name + " Target").transform;
-                SetPositionRootSpace(Target, GetPositionRootSpace(transform));
-            }
+            // if (Target.Value == null)
+            // {
+            //     Target = new GameObject(gameObject.name + " Target").transform;
+            //     SetPositionRootSpace(Target.Value, GetPositionRootSpace(transform));
+            // }
             StartRotationTarget = GetRotationRootSpace(Target);
-
 
             //init data
             var current = transform;
@@ -105,15 +121,17 @@ namespace DitzelGames.FastIK
 
                 current = current.parent;
             }
-
-
-
         }
 
         // Update is called once per frame
         void LateUpdate()
         {
-            ResolveIK();
+            // Update the target transform with the networked target position
+            Target.position = TargetPosition.Value;
+            
+            // Only apply the IK if the networked enable is set
+            if(Enabled.Value)
+                ResolveIK();
         }
 
         private void ResolveIK()
