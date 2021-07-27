@@ -1,0 +1,169 @@
+Using pre-set license
+Built from '2021.1/staging' branch; Version is '2021.1.12f1 (afcadd793de6) revision 11520733'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1110; Version 2009; 64bit' Language: 'en' Physical Memory: 32612 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+E:\Unity\2021.1.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+D:/Projects/MLAPI_Test
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+65406
+Successfully changed project path to: D:/Projects/MLAPI_Test
+D:/Projects/MLAPI_Test
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 277.16 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 1.50 ms.
+Initialize engine version: 2021.1.12f1 (afcadd793de6)
+[Subsystems] Discovering subsystems at path E:/Unity/2021.1.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Projects/MLAPI_Test/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 with Max-Q Design (ID=0x1f10)
+    Vendor:   NVIDIA
+    VRAM:     8031 MB
+    Driver:   27.21.14.6647
+Initialize mono
+Mono path[0] = 'E:/Unity/2021.1.12f1/Editor/Data/Managed'
+Mono path[1] = 'E:/Unity/2021.1.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'E:/Unity/2021.1.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56360
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Unity/2021.1.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001504 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 144.96 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.134 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3134ms)
+		BeginReloadAssembly (112ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (605ms)
+			LoadAssemblies (111ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (206ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (307ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (145ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (118ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.014399 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Projects\MLAPI_Test\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image D:\Projects\MLAPI_Test\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 143.06 ms, found 5 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Find all reader and writers took 185 milliseconds
+Script Module: UnityEngine.UI.dll
+Weave behaviours and messages took 170 milliseconds
+Find all reader and writers took 196 milliseconds
+Script Module: DissonanceVoip.dll
+Weave behaviours and messages took 173 milliseconds
+Find all reader and writers took 171 milliseconds
+Script Module: Unity.RenderPipelines.Core.Runtime.dll
+Weave behaviours and messages took 123 milliseconds
+Find all reader and writers took 229 milliseconds
+Script Module: UnityEngine.TestRunner.dll
+Weave behaviours and messages took 61 milliseconds
+Find all reader and writers took 174 milliseconds
+Script Module: Unity.Mathematics.dll
+Weave behaviours and messages took 535 milliseconds
+Find all reader and writers took 198 milliseconds
+Script Module: SimpleWebTransport.dll
+Weave behaviours and messages took 14 milliseconds
+Find all reader and writers took 176 milliseconds
+Script Module: Unity.Multiplayer.MLAPI.Runtime.dll
+Weave behaviours and messages took 110 milliseconds
+Find all reader and writers took 173 milliseconds
+Script Module: Unity.VisualScripting.State.dll
+Weave behaviours and messages took 15 milliseconds
+Find all reader and writers took 173 milliseconds
+Script Module: Unity.VisualScripting.Core.dll
+Weave behaviours and messages took 351 milliseconds
+Find all reader and writers took 291 milliseconds
+Script Module: Unity.RenderPipelines.Universal.Runtime.dll
+Weave behaviours and messages took 188 milliseconds
+Find all reader and writers took 201 milliseconds
+Script Module: Unity.VisualScripting.Flow.dll
+Weave behaviours and messages took 264 milliseconds
+Find all reader and writers took 248 milliseconds
+Script Module: Unity.TextMeshPro.dll
+Weave behaviours and messages took 217 milliseconds
+Find all reader and writers took 285 milliseconds
+Script Module: Unity.Timeline.dll
+Weave behaviours and messages took 121 milliseconds
+Find all reader and writers took 278 milliseconds
+Script Module: Photon Realtime MLAPI Transport.dll
+Weave behaviours and messages took 153 milliseconds
+Find all reader and writers took 364 milliseconds
+Script Module: Telepathy.dll
+Weave behaviours and messages took 10 milliseconds
+Find all reader and writers took 221 milliseconds
+Script Module: kcp2k.dll
+Weave behaviours and messages took 20 milliseconds
+Find all reader and writers took 224 milliseconds
+Script Module: Unity.RenderPipeline.Universal.ShaderLibrary.dll
+Weave behaviours and messages took 0 milliseconds
+Find all reader and writers took 316 milliseconds
+Script Module: where-allocations.dll
+Weave behaviours and messages took 0 milliseconds
+Find all reader and writers took 212 milliseconds
+Script Module: Assembly-CSharp-firstpass.dll
+Weave behaviours and messages took 29 milliseconds
+Find all reader and writers took 203 milliseconds
+Script Module: Unity.RenderPipelines.Core.ShaderLibrary.dll
+Weave behaviours and messages took 0 milliseconds
+Find all reader and writers took 172 milliseconds
+Script Module: Unity.Multiplayer.MLAPI.Prototyping.dll
+Weave behaviours and messages took 12 milliseconds
+Find all reader and writers took 279 milliseconds
+Script Module: Unity.RenderPipelines.Universal.Shaders.dll
+Weave behaviours and messages took 0 milliseconds
+Find all reader and writers took 173 milliseconds
+Script Module: Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
+Weave behaviours and messages took 0 milliseconds
+Find all reader and writers took 175 milliseconds
+Script Module: VSSettingsProvider.dll
+Weave behaviours and messages took 1 milliseconds
+Find all reader and writers took 254 milliseconds
+Script Module: UnityEditor.TestRunner.dll
+Weave behaviours and messages took 92 milliseconds
+Find all reader and writers took 189 milliseconds
+Script Module: ParrelSync.dll
+Weave behaviours and messages took 5 milliseconds
+Find all reader and writers took 207 milliseconds
+Script Module: DissonanceVoipEditor.dll
+Weave behaviours and messages took 20 milliseconds
+Find all reader and writers took 143 milliseconds
+Script Module: Mirror.CompilerSymbols.dll
+Weave behaviours and messages took 0 milliseconds
+Find all reader and writers took 183 milliseconds
+Script Module: UnityEditor.UI.dll
+Weave behaviours and messages took 23 milliseconds

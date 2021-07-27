@@ -8,4 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: f1faddb756f6d9746a953e3b1084c2af
+  - enabled: 1
+    path: Assets/Dissonance/Integrations/MirrorIgnorance/Demo/MirrorIgnorance Demo.unity
+    guid: bb07781d277bdb4419ed472505c89305
+  - enabled: 1
+    path: Assets/Dissonance/Integrations/MirrorIgnorance/Demo/MirrorIgnorance Game
+      World.unity
+    guid: 7050b0d6c739022479fe143101b36e4b
   m_configObjects: {}
