@@ -18,9 +18,6 @@ public class Character : NetworkBehaviour, IDissonancePlayer
     [SerializeField] private Transform _leftHand;
     [SerializeField] private DissonanceComms _dissonanceCommsPrefab;
     private DissonanceComms _comms;
-    private RoomChannel _roomChannel;
-    private PlayerChannel _playerChannel;
-    private IDissonancePlayer _dissonancePlayer;
 
     public static Character LocalCharacter => FindObjectsOfType<Character>().FirstOrDefault(character => character.IsLocalPlayer);
     public string PlayerId { get; set; }
@@ -74,43 +71,6 @@ public class Character : NetworkBehaviour, IDissonancePlayer
             //Subscribe to future name changes (this is critical because we may not have run the initial set name yet and this will trigger that initial call)
             _comms.LocalPlayerNameChanged += SetPlayerName;
         }
-        
-        // Get the Dissonance player
-        _dissonancePlayer = GetComponent<IDissonancePlayer>() ?? GetComponentInParent<IDissonancePlayer>();
-        
-        // Open the voice channel
-        OpenChannel();
-    }
-    
-    private void OpenChannel()
-    {
-        // Open the global voice channel
-        _roomChannel = _comms.RoomChannels.Open("Global");
-
-        // if (IsLocalPlayer)
-        // {
-            // _playerChannel = _comms.PlayerChannels.Open(PlayerId, true);
-        // }
-        // else
-        // {
-        _playerChannel = _comms.PlayerChannels.Open(_dissonancePlayer.PlayerId, true);
-        // }
-        
-        // if (ChannelType == CommTriggerTarget.Player)
-        // {
-        //     if (PlayerId != null)
-        //         _playerChannel = _comms.PlayerChannels.Open(PlayerId, _broadcastPosition, _priority, CurrentFaderVolume);
-        //     else
-        //         Log.Warn("Attempting to transmit to a null player ID");
-        // }
-        // else if (ChannelType == CommTriggerTarget.Self)
-        // {
-        //     //Don't warn if self does not have an ID yet - it could just be initialising
-        //     if (_self == null)
-        //         Log.Warn("Attempting to transmit to a null player object");
-        //     else if (_self.PlayerId != null)
-        //         _playerChannel = _comms.PlayerChannels.Open(_self.PlayerId, _broadcastPosition, _priority);
-        // }
     }
     
     public void OnDestroy()
